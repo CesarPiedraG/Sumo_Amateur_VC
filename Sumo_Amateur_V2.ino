@@ -25,7 +25,7 @@ void setup() {
   //Pines sensores infrarrojo
   pinMode(infraTras, INPUT);
   pinMode(infraFrontIzq, INPUT);
-  pinMode(infraFrontDer, INPUT)
+  pinMode(infraFrontDer, INPUT);
 
   inicializarLasers();
 
@@ -40,7 +40,7 @@ void loop() {
 
   bool rivalDer = rivalDetectado(distDer());
   bool rivalIzq = rivalDetectado(distIzq());
-  bool rival = rivalDetectado(distDer()) && rivalDetectado(distIzq());
+  bool rival = rivalDer && rivalIzq;
 
   int lecturaFrontDer = detectarFrontDer();
   int lecturaFrontIzq = detectarFrontIzq();
