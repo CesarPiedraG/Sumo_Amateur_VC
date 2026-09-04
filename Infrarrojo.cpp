@@ -8,6 +8,6 @@ int detectarFrontIzq(){
   return analogRead(infraFrontIzq);
 }
 int detectarTras(){
-  return = analogRead(infraTras);
+  return analogRead(infraTras);
 }
 
