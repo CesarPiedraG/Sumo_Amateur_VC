@@ -3,7 +3,7 @@
 
 #include <Arduino.h>
 
-//Sensor TCRT5000
+//Sensor QRE1113
 const uint8_t infraFrontDer = A0;
 const uint8_t infraFrontIzq = A1;
 const uint8_t infraTras = A2;
