@@ -34,13 +34,19 @@ void inicializarLasers(){
 }
 
 int distDer(){
-  int distDer = sensorDer.readRangeContinuousMillimeters();
-  return distDer;
+  int lecturaDer = sensorDer.readRangeContinuousMillimeters();
+  if (sensorDer.timeoutOccurred() || lecturaDer > 2000) {
+    return 9999;
+  }
+  return lecturaDer;
 }
 
 int distIzq(){
-  int distIzq = sensorIzq.readRangeContinuousMillimeters();
-  return distIzq;
+  int lecturaIzq = sensorIzq.readRangeContinuousMillimeters();
+  if (sensorIzq.timeoutOccurred() || lecturaIzq > 2000) { //2000 ajustable a prubeas
+    return 9999;
+  }
+  return lecturaIzq;
 }
 
 bool rivalDetectado(int dist){
