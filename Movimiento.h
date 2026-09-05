@@ -22,8 +22,10 @@ const int velocidadSuave = 150;
 //Declaración de funciones
 void giroDerecha();
 void giroIzquierda();
-void ejeDerecha();
-void ejeIzquierda();
+void retrocesoDer(); // Agregada
+void retrocesoIzq(); // Agregada
+void ejeDerecha(); // Agregada
+void ejeIzquierda(); // Agregada
 void busqueda();
 void avance();
 void retroceso();
