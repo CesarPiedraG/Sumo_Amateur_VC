@@ -1,6 +1,5 @@
 #include "Movimiento.h"
-#include "Laser.h"
-#include "Infrarrojo.h"
+
 
 void avance(){
   digitalWrite(AI1, LOW);
@@ -16,8 +15,8 @@ void retroceso(){
   digitalWrite(AI2, LOW);
   digitalWrite(BI1, HIGH);
   digitalWrite(BI2, LOW);
-  analogWrite(PWMA, velociadMid);
-  analogWrite(PWMB, velociadMid);
+  analogWrite(PWMA, velocidadMid);
+  analogWrite(PWMB, velocidadMid);
 }
 
 void retrocesoDer(){
@@ -25,8 +24,8 @@ void retrocesoDer(){
   digitalWrite(AI2, LOW);
   digitalWrite(BI1, HIGH);
   digitalWrite(BI2, LOW);
-  analogWrite(PWMA, velociadSuave);
-  analogWrite(PWMB, velociadMid);
+  analogWrite(PWMA, velocidadSuave);
+  analogWrite(PWMB, velocidadMid);
 }
 
 void retrocesoIzq(){
@@ -57,12 +56,12 @@ void ejeIzquierda(){
   analogWrite(PWMB, velocidadSuave);
 }
 
-void detener(){
-  digitalWrite(AI1, LOW);
-  digitalWrite(AI2, LOW);
-  digitalWrite(BI1, LOW);
-  digitalWrite(BI2, LOW);
-  analogWrite(PWMA, 0);
-  analogWrite(PWMB, 0);
-}
+void detener() {
+  digitalWrite(AI1, HIGH);
+  digitalWrite(AI2, HIGH);
+  digitalWrite(BI1, HIGH);
+  digitalWrite(BI2, HIGH);
+  analogWrite(PWMA, 0);
+  analogWrite(PWMB, 0);
+} 
 
