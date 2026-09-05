@@ -25,5 +25,6 @@ void giroIzquierda();
 void busqueda();
 void avance();
 void retroceso();
+void detener();
 
 #endif
